@@ -1,0 +1,14 @@
+# samson
+This directory contains two main major programs: dmalpha.py to find slope of a DM profile and plot them against observations (see Chan+2017 for more details).
+
+Before running the python program, we need to set the python library path such that it links to the correct tools:
+export PYTHONPATH=$PYTHONPATH:'program directory'/tkcprogram/tools/, where program directory is the location or tkcprogram.
+We also need scripy, numpy, matplotlib, os, etc for the code to work.
+
+To load a snpashot file (in hdf5 format), we need to modify the info in cosmichalo, esp 'maindir', 'rundir', & 'subdir'. Your hdf5 file should be at 'maindir'/'rundir'/'subdir'.
+
+We also need the information from AHF and/or MergerTree, which should be available on stampede FIRE folder (for my runs), e.g. Pep and halos folders. We should put them in 'maindir'/'rundir'
+
+Finally, modify the programdir in dmalpha.py.
+
+After the above preparations, we can compile dmalpha.py and get plots in figures directory and data in outputdata.
